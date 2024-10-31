@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  webserver:
+    image: erseco/alpine-php-webserver
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/var/www/html
+    restart: unless-stopped
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+    volumes:
+      - ./create_db.sql:/docker-entrypoint-initdb.d/create_db.sql
