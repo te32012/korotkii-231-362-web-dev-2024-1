@@ -12,10 +12,10 @@ include 'header.html';
             echo '<p> Здравствуйте, '.$_POST['name'].'</p>'; //выводим ФИО
             if ($_POST['category'] == 'propose'){ //проверяем тип обращения
                     echo '<p>Спасибо за ваше предложение:</p>';
-                    echo '<textarea>'.$_POST['message'].'</textarea>';//вывод текста сообщения
+                    echo '<p>'.$_POST['message'].'</p>';//вывод текста сообщения
             }else{
                     echo '<p>Мы рассмотрим Вашу жалобу:</p>';
-                    echo '<textarea>'.$_POST['message'].'</textarea>';
+                    echo '<p>'.$_POST['message'].'</p>';
             }
             ?>
             <br>

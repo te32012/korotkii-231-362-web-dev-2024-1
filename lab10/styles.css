@@ -1,0 +1,71 @@
+
+body, h1, h2, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    background-color: #000000;
+    padding: 10px 0;
+    position:sticky; 
+    z-index: 1;
+}
+img{
+    float: left;
+    width: 30%;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(236, 232, 232);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #000000;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding: 20px 0;
+    
+}
+.btn, button a{
+    text-decoration: none;
+    color: black;
+    height: 35px;
+    width: auto;
+    min-width: 120px;
+    background-color: rgba(224, 224, 224, 0);
+    border-radius: 5px;
+    border-color: rgb(53, 53, 53);
+}
+

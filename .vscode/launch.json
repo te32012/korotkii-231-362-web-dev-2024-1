@@ -20,8 +20,8 @@
                 "-S",
                 "localhost:9003"
             ],
-            "program": "/Users/ivan/web-lab-polytech/korotkii-231-362-web-dev-2024-1/lab4/index.php",
-            "cwd": "/Users/ivan/web-lab-polytech/korotkii-231-362-web-dev-2024-1/lab4/",
+            "program": "/Users/ivan/web-lab-polytech/korotkii-231-362-web-dev-2024-1/pk2/index.php",
+            "cwd": "/Users/ivan/web-lab-polytech/korotkii-231-362-web-dev-2024-1/pk2/",
             "port": 9003,
             "serverReadyAction": {
                 "pattern": "Development Server \\(http://localhost:([0-9]+)\\) started",

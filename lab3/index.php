@@ -1,6 +1,9 @@
 <?php
-$title = 'Короткий Иван Михайлович 231-362';
+$title = 'Короткий Иван Михайлович 239-362';
 $array = array('Маруся', 'Люча', 'Хонг', 'Расл');
+$name = 'Главная';
+$link = 'index.php';
+$current_page = true;
 ?>
 
 <!doctype html>
@@ -19,9 +22,6 @@ $array = array('Маруся', 'Люча', 'Хонг', 'Расл');
         <nav>
             <ul><li>
                 <a href="<?php
-                    $name = 'Главная';
-                    $link = 'index.php';
-                    $current_page = true;
 
                     echo $link;
 
@@ -38,10 +38,6 @@ $array = array('Маруся', 'Люча', 'Хонг', 'Расл');
            
             <li>
                 <a href="<?php
-                    $name = 'Обратная связь';
-                    $link = 'feedback.php';
-                    $current_page = false;
-
                     echo $link;
 
                     ?>">
@@ -56,9 +52,6 @@ $array = array('Маруся', 'Люча', 'Хонг', 'Расл');
             </li>
             <li>
                 <a href="<?php
-                    $name = 'Вход';
-                    $link = 'authorization.php';
-                    $current_page = false;
 
                     echo $link;
 
@@ -81,14 +74,18 @@ $array = array('Маруся', 'Люча', 'Хонг', 'Расл');
         <h1>Кошачий приют "Забота"</h1>
            <p>Кошачий приют "Забота" дает дом для кошек, которые потеряли хозяев - наша миссия найти дом каждому питомцу:<br><br>
            <?php foreach ($array as $n => $row) {
-                echo  ' ' .($n + 1) . '.' .' '. $row . "<br>\r\n";
+                echo  ' ' .($n + 1) . '.' .' '. $row . "<br>";
             } ?>
            </p></div>
         
         <div class="image-container">
-        <?php echo '<img src="cat'.(date('s')% 2 + 1).'.jpg" alt="My photo"'?>
+        <?php echo '<img src="cat'.(2).'.jpg" alt="My photo"'?>
+        </div>
+        <div class="image-container">
+        <?php echo '<img src="cat'.(1).'.jpg" alt="My photo"'?>
         </div>
         
+
         
     </main>
     <footer>

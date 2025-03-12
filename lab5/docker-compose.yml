@@ -1,16 +1,47 @@
 version: '3.8'
 
 services:
-  webserver:
-    image: erseco/alpine-php-webserver
-    ports:
-      - 8080:8080
-    volumes:
-      - ./:/var/www/html
+  db:
+    image: mariadb:11.3.2-jammy
     restart: unless-stopped
-  mysql:
-    image: mysql
     environment:
-      MYSQL_ROOT_PASSWORD: admin
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: lab5
+      MARIADB_USER: user
+      MARIADB_PASSWORD: user
+      TZ: Europe/Bratislava
+    ports:
+      - "3306:3306"
+    expose:
+      - '3306'
     volumes:
       - ./create_db.sql:/docker-entrypoint-initdb.d/create_db.sql
+      - "./mariadb_data:/var/lib/mysql"
+
+  phpmyadmin:
+    image: phpmyadmin:5.2.1-apache
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      PMA_USER: root
+      PMA_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8080:80"
+    expose:
+      - "8080"
+
+  php-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - db
+      - phpmyadmin
+    ports:
+      - "3000:80"
+    expose:
+      - "3000"

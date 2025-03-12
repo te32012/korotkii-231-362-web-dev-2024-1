@@ -1,0 +1,148 @@
+body, h1, h2, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #000000;
+    color: #fefdcc;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    position: center;
+    padding-left: 20px;
+}
+main table {
+    max-width: 80px; 
+    margin-bottom: 0; 
+}
+main tr {
+    border-bottom: 1px solid #ccc;
+}
+main td {
+    padding: 3px;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+
+h1, h2 {
+    color: #000000;
+}
+
+
+img{
+    float: left;
+    width: 30%;
+    padding: 20px;
+}
+
+
+footer {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; 
+}
+
+
+div {
+    margin-bottom: 8px;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+aside a:active,
+aside a.selected,
+aside a.selected-all {
+    color: rgb(0, 106, 255);
+}
+nav a:active,
+nav a.selected{
+    color: rgb(30, 0, 255);
+}
+
+nav a {
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover , aside a:hover{
+    color: #0699b6;
+}
+nav li{
+    display: inline; 
+    margin-right: 5px;
+    padding: 3px;
+}
+
+
+
+
+aside {
+    width: 230px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    position: left absolute;
+    
+
+}
+
+aside a {
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.container {
+    display:flex;
+    width: 90%;
+    margin: 20px;
+    padding: 20px;
+}
+
